@@ -5,9 +5,6 @@ import json
 import pymongo
 from datetime import datetime
 
-# # if you encounter a "year is out of range" error the timestamp
-# # may be in milliseconds, try `ts /= 1000` in that case
-# print(datetime.utcfromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S'))
 
 mongo = pymongo.MongoClient("mongodb://localhost:27017/logs")
 userchat = mongo.logs.userinput
@@ -33,9 +30,6 @@ def main():
             message["datetime"]=datetime.fromtimestamp(message['timestamp'])
             botchat.insert_one(message)
         # print('Received event only {}'.format(message["event"]))
-        # print('Received event Timestamp {}'.format(datetime.utcfromtimestamp(
-        #     message["timestamp"]).strftime('%Y-%m-%d %H:%M:%S')))
-        # print('Received event {}'.format(json.dumps(message, indent=8)))
 
     channel.basic_consume(queue='rasa_queue',
                           on_message_callback=callback, auto_ack=True)
