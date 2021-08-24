@@ -8,12 +8,13 @@
    - [Rasa](https://rasa.com/docs/rasa/installation/) (v2.3.4)
     
        
-   ### Python dependencies
+## Python dependencies
 
    Pika : `pip install pika`
    Pymongo : `pip install pymongo`
    
-    
+## Steps
+
    Enable Rabbitmq management interface : `rabbitmq-plugins enable rabbitmq_management`
    
    You can then access it through : `http://localhost:15672/`
