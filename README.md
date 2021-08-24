@@ -9,6 +9,7 @@
     
     
    Enable Rabbitmq management interface : `rabbitmq-plugins enable rabbitmq_management`
+   
    You can then access it through : `http://localhost:15672/`
 
    Install pika : `pip install pika`
