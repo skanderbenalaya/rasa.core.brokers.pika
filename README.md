@@ -2,8 +2,6 @@
 
 ## Requirements
 
-    install Rabbitmq-server
+   Install Rabbitmq-server
     
-    Enable Rabbitmq management interface 
-
-    `rabbitmq-plugins enable rabbitmq_management`
+   Enable Rabbitmq management interface : `rabbitmq-plugins enable rabbitmq_management`
