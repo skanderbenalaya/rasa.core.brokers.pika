@@ -11,6 +11,7 @@
 ## Python dependencies
 
    Pika : `pip install pika`
+   
    Pymongo : `pip install pymongo`
    
 ## Steps
